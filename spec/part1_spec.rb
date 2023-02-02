@@ -8,7 +8,7 @@ describe 'Ruby intro part 1' do
     it 'should be defined' do
       expect { sum([1, 3, 4]) }.not_to raise_error
     end
-
+#niah
     it 'returns correct sum [20 points]', points: 20 do
       expect(sum([1, 2, 3, 4, 5])).to be_a_kind_of Integer
       expect(sum([1, 2, 3, 4, 5])).to eq(15)
