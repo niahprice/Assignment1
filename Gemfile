@@ -2,7 +2,7 @@
 
 source 'http://rubygems.org'
 
-ruby '3.2.0'
+ruby '3.0.1'
 
 gem 'byebug'
 gem 'rspec'
