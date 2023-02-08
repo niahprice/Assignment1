@@ -1,0 +1,150 @@
+
+Ruby intro part 1
+  #sum
+[32m    should be defined[0m
+[32m    returns correct sum [20 points][0m
+[32m    works on the empty array [10 points][0m
+  #max_2_sum
+[32m    should be defined[0m
+[32m    returns the correct sum [7 points][0m
+[32m    works even if 2 largest values are the same [3 points][0m
+[32m    returns zero if array is empty [10 points][0m
+[32m    returns value of the element if just one element [10 points][0m
+  #sum_to_n
+[31m    should be defined (FAILED - 1)[0m
+[31m    returns true when any two elements sum to the second argument [30 points] (FAILED - 2)[0m
+[31m    returns false for any single element array [5 points] (FAILED - 3)[0m
+[32m    returns false for an empty array [5 points][0m
+
+Ruby intro part 2
+  #hello
+[32m    should be defined[0m
+[32m    The hello method returns the correct string [30 points][0m
+  #starts_with_consonant?
+[31m    should be defined (FAILED - 4)[0m
+[31m    classifies true cases [10 points] (FAILED - 5)[0m
+[31m    classifies false cases [10 points] (FAILED - 6)[0m
+[31m    works on the empty string [5 points] (FAILED - 7)[0m
+[31m    works on nonletters [5 points] (FAILED - 8)[0m
+  #binary_multiple_of_4?
+[32m    should be defined[0m
+[31m    classifies valid binary numbers [30 points] (FAILED - 9)[0m
+[32m    rejects invalid binary numbers [10 points][0m
+
+Ruby intro part 3
+  BookInStock
+[32m    should be defined[0m
+    getters and setters
+[32m      should set ISBN [10 points][0m
+[32m      should set price [10 points][0m
+[32m      should be able to change ISBN [10 points][0m
+[32m      should be able to change price [10 points][0m
+    constructor
+[32m      should reject invalid ISBN number [10 points][0m
+[32m      should reject zero price [10 points][0m
+[32m      should reject negative price [10 points][0m
+    #price_as_string
+[32m      should be defined[0m
+[32m      should display 33.95 as "$33.95" [10 points][0m
+[32m      should display 1.1 as $1.10 [10 points][0m
+[32m      should display 20 as $20.00 [10 points][0m
+
+Failures:
+
+  1) Ruby intro part 1 #sum_to_n should be defined
+     [31mFailure/Error: expect { sum_to_n?([1, 2, 3], 4) }.not_to raise_error[0m
+     [31m[0m
+     [31m  expected no Exception, got #<NameError: undefined local variable or method `n' for #<RSpec::ExampleGroups::RubyIntroPart1::SumToN "should be defined" (./spec/part1_spec.rb:47)>> with backtrace:[0m
+     [31m    # ./lib/ruby_intro.rb:20:in `block in sum_to_n?'[0m
+     [31m    # ./lib/ruby_intro.rb:20:in `any?'[0m
+     [31m    # ./lib/ruby_intro.rb:20:in `sum_to_n?'[0m
+     [31m    # ./spec/part1_spec.rb:48:in `block (4 levels) in <top (required)>'[0m
+     [31m    # ./spec/part1_spec.rb:48:in `block (3 levels) in <top (required)>'[0m
+     [36m# ./spec/part1_spec.rb:48:in `block (3 levels) in <top (required)>'[0m
+
+  2) Ruby intro part 1 #sum_to_n returns true when any two elements sum to the second argument [30 points]
+     [31mFailure/Error: arr.product(arr).any? {|couple| sum(couple) == n}[0m
+     [31m[0m
+     [31mNameError:[0m
+     [31m  undefined local variable or method `n' for #<RSpec::ExampleGroups::RubyIntroPart1::SumToN "returns true when any two elements sum to the second argument [30 points]" (./spec/part1_spec.rb:50)>[0m
+     [36m# ./lib/ruby_intro.rb:20:in `block in sum_to_n?'[0m
+     [36m# ./lib/ruby_intro.rb:20:in `any?'[0m
+     [36m# ./lib/ruby_intro.rb:20:in `sum_to_n?'[0m
+     [36m# ./spec/part1_spec.rb:51:in `block (3 levels) in <top (required)>'[0m
+
+  3) Ruby intro part 1 #sum_to_n returns false for any single element array [5 points]
+     [31mFailure/Error: arr.product(arr).any? {|couple| sum(couple) == n}[0m
+     [31m[0m
+     [31mNameError:[0m
+     [31m  undefined local variable or method `n' for #<RSpec::ExampleGroups::RubyIntroPart1::SumToN "returns false for any single element array [5 points]" (./spec/part1_spec.rb:57)>[0m
+     [36m# ./lib/ruby_intro.rb:20:in `block in sum_to_n?'[0m
+     [36m# ./lib/ruby_intro.rb:20:in `any?'[0m
+     [36m# ./lib/ruby_intro.rb:20:in `sum_to_n?'[0m
+     [36m# ./spec/part1_spec.rb:58:in `block (3 levels) in <top (required)>'[0m
+
+  4) Ruby intro part 2 #starts_with_consonant? should be defined
+     [31mFailure/Error: expect { starts_with_consonant?('d') }.not_to raise_error # ::NoMethodError[0m
+     [31m[0m
+     [31m  expected no Exception, got #<NameError: undefined local variable or method `s' for #<RSpec::ExampleGroups::RubyIntroPart2::StartsWithConsonant "should be defined" (./spec/part2_spec.rb:21)>> with backtrace:[0m
+     [31m    # ./lib/ruby_intro.rb:30:in `starts_with_consonant?'[0m
+     [31m    # ./spec/part2_spec.rb:22:in `block (4 levels) in <top (required)>'[0m
+     [31m    # ./spec/part2_spec.rb:22:in `block (3 levels) in <top (required)>'[0m
+     [36m# ./spec/part2_spec.rb:22:in `block (3 levels) in <top (required)>'[0m
+
+  5) Ruby intro part 2 #starts_with_consonant? classifies true cases [10 points]
+     [31mFailure/Error: s =~ /^[bcdfghjklmnpqrstvwxyz]/i[0m
+     [31m[0m
+     [31mNameError:[0m
+     [31m  undefined local variable or method `s' for #<RSpec::ExampleGroups::RubyIntroPart2::StartsWithConsonant "classifies true cases [10 points]" (./spec/part2_spec.rb:24)>[0m
+     [36m# ./lib/ruby_intro.rb:30:in `starts_with_consonant?'[0m
+     [36m# ./spec/part2_spec.rb:25:in `block (3 levels) in <top (required)>'[0m
+
+  6) Ruby intro part 2 #starts_with_consonant? classifies false cases [10 points]
+     [31mFailure/Error: s =~ /^[bcdfghjklmnpqrstvwxyz]/i[0m
+     [31m[0m
+     [31mNameError:[0m
+     [31m  undefined local variable or method `s' for #<RSpec::ExampleGroups::RubyIntroPart2::StartsWithConsonant "classifies false cases [10 points]" (./spec/part2_spec.rb:31)>[0m
+     [36m# ./lib/ruby_intro.rb:30:in `starts_with_consonant?'[0m
+     [36m# ./spec/part2_spec.rb:32:in `block (3 levels) in <top (required)>'[0m
+
+  7) Ruby intro part 2 #starts_with_consonant? works on the empty string [5 points]
+     [31mFailure/Error: s =~ /^[bcdfghjklmnpqrstvwxyz]/i[0m
+     [31m[0m
+     [31mNameError:[0m
+     [31m  undefined local variable or method `s' for #<RSpec::ExampleGroups::RubyIntroPart2::StartsWithConsonant "works on the empty string [5 points]" (./spec/part2_spec.rb:37)>[0m
+     [36m# ./lib/ruby_intro.rb:30:in `starts_with_consonant?'[0m
+     [36m# ./spec/part2_spec.rb:38:in `block (3 levels) in <top (required)>'[0m
+
+  8) Ruby intro part 2 #starts_with_consonant? works on nonletters [5 points]
+     [31mFailure/Error: s =~ /^[bcdfghjklmnpqrstvwxyz]/i[0m
+     [31m[0m
+     [31mNameError:[0m
+     [31m  undefined local variable or method `s' for #<RSpec::ExampleGroups::RubyIntroPart2::StartsWithConsonant "works on nonletters [5 points]" (./spec/part2_spec.rb:40)>[0m
+     [36m# ./lib/ruby_intro.rb:30:in `starts_with_consonant?'[0m
+     [36m# ./spec/part2_spec.rb:41:in `block (3 levels) in <top (required)>'[0m
+
+  9) Ruby intro part 2 #binary_multiple_of_4? classifies valid binary numbers [30 points]
+     [31mFailure/Error: bin.to_string.to_i(2) % 4 == 0[0m
+     [31m[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `to_string' for #<MatchData "1010101010100">[0m
+     [36m# ./lib/ruby_intro.rb:35:in `binary_multiple_of_4?'[0m
+     [36m# ./spec/part2_spec.rb:51:in `block (4 levels) in <top (required)>'[0m
+     [36m# ./spec/part2_spec.rb:50:in `each'[0m
+     [36m# ./spec/part2_spec.rb:50:in `block (3 levels) in <top (required)>'[0m
+
+Finished in 0.06328 seconds (files took 0.12739 seconds to load)
+[31m34 examples, 9 failures[0m
+
+Failed examples:
+
+[31mrspec ./spec/part1_spec.rb:47[0m [36m# Ruby intro part 1 #sum_to_n should be defined[0m
+[31mrspec ./spec/part1_spec.rb:50[0m [36m# Ruby intro part 1 #sum_to_n returns true when any two elements sum to the second argument [30 points][0m
+[31mrspec ./spec/part1_spec.rb:57[0m [36m# Ruby intro part 1 #sum_to_n returns false for any single element array [5 points][0m
+[31mrspec ./spec/part2_spec.rb:21[0m [36m# Ruby intro part 2 #starts_with_consonant? should be defined[0m
+[31mrspec ./spec/part2_spec.rb:24[0m [36m# Ruby intro part 2 #starts_with_consonant? classifies true cases [10 points][0m
+[31mrspec ./spec/part2_spec.rb:31[0m [36m# Ruby intro part 2 #starts_with_consonant? classifies false cases [10 points][0m
+[31mrspec ./spec/part2_spec.rb:37[0m [36m# Ruby intro part 2 #starts_with_consonant? works on the empty string [5 points][0m
+[31mrspec ./spec/part2_spec.rb:40[0m [36m# Ruby intro part 2 #starts_with_consonant? works on nonletters [5 points][0m
+[31mrspec ./spec/part2_spec.rb:49[0m [36m# Ruby intro part 2 #binary_multiple_of_4? classifies valid binary numbers [30 points][0m
+
